@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo Javascript</title>
+        <script src="{% static 'ejemploJavascript.js' %}"></script>
+    </head>
+    <body>
+        <h1>5</h1>
+        <div>
+            <button onclick="aumentarValor()">INCREMENTAR</button>
+            <button onclick="disminuirValor()">DISMINUIR</button>
+        </div>
+        <br>
+        <div>
+            <select id="seleccionarNumero" onchange="imprimirSeleccion()">
+                <option value="" selected></option>
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+                <option value="60">60</option>
+            </select>
+            <input id="numeroNuevo" type="number" readonly>
+            <button onclick="agregarNumero()">AGREGAR</button>
+            <button onclick="sumarTodosLosNumeros()">SUMAR</button>
+        </div>
+        <div>
+            <ul id="listaNumeros"></ul>
+        </div>
+        <div>
+            LA SUMA DE TODOS LOS ELEMENTOS ES <i id="sumaFinal">SUMA</i>
+        </div>
+        <div id="divisionColor" style="width: 50px; height: 80px; background-color: blue;" onmouseover="cambiarColor()" onmouseleave="devolverColor()">
+        </div>
+    </body>
+</html>
